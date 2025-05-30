@@ -26,10 +26,8 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_CXX_VISIBILITY_INLINES_HIDDEN ON)
 set(BUILD_SHARED_LIBS ON)
 
-## Check system architecture
 message(STATUS "Current system architecture: ${CMAKE_SYSTEM_PROCESSOR}")
 
-## Import Unitree SDK2 library
 set(MAGIC_M1_SDK_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib/${CMAKE_SYSTEM_PROCESSOR})
 find_library(
   MAGIC_M1_SDK_LIB magic_sdk
@@ -62,7 +60,6 @@ endif()
 
 include(GNUInstallDirs)
 
-## Install the library
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 install(FILES ${MAGIC_M1_SDK_LIB} DESTINATION ${CMAKE_INSTALL_LIBDIR})

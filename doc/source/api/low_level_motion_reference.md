@@ -2,7 +2,7 @@
 
 > 提供机器人系统底层运动控制服务，通过LowLevelMotionController可以通过话题通信方式实现对机器人的关节进行指令控制和状态获取。
 
-## LowLevelMotionController 接口定义
+## 接口定义
 `LowLevelMotionController` 是面向底层开发的运动控制器，支持对手臂、腿、头、腰、手等运动部件的直接控制与状态订阅，以及身体IMU数据的获取。
 
 ### LowLevelMotionController
@@ -151,7 +151,7 @@
 | 参数说明 | callback：IMU 数据处理函数 |
 | 备注 | 非阻塞接口。 |
 
-## LowLevelMotionController 类型定义
+## 类型定义
 
 ### `SingleHandJointCommand` — 单个手部关节的控制命令
 
@@ -249,13 +249,15 @@
 | `joints`   | `std::vector<SingleJointState>` | 所有关节的状态数据 |
 
 
-## LowLevelMotionController URDF参考
+## URDF参考
 
 [机器人URDF](https://github.com/MagiclabRobotics/m1_description)
 
 
-## HighLevelMotionController 底层运动控制机器人状态介绍
+## 底层运动控制机器人状态介绍
 
 机器人底层运动主要是开发关节的三环控制给开发人员进行机器人运动能力的二次开发，基本的控制状态切换机制：
 
 ![状态切换示意图](../image/low_level_ctrl_state.png)
+
+

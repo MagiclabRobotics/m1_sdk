@@ -3,7 +3,7 @@
 > 提供机器人系统高层运动控制服务，通过HighLevelMotionController可以通过RPC通信方式实现对机器人的步态、特技、遥控的控制。
 
 
-## HighLevelMotionController 接口定义
+## 接口定义
 `HighLevelMotionController` 是面向语义控制的高层运动控制器，支持如行走、特技、头部运动等控制操作，封装底层细节以供上层系统调用。
 
 ### HighLevelMotionController
@@ -83,7 +83,7 @@
 | 备注 | 非阻塞接口，建议发送频率为 20Hz。 |
 
 
-## HighLevelMotionController 类型定义
+## 类型定义
 
 ### `JoystickCommand` — 高层运动控制摇杆指令结构体
 
@@ -131,7 +131,7 @@
 | `ACTION_TURN_BACK`                | 307  | 扭身朝前             |
 
 
-## HighLevelMotionController 遥控器示意图
+## 遥控器示意图
 
 ![遥控器示意图](../image/joy_stick.png)
 
@@ -139,7 +139,7 @@
 2. 左右摇杆x轴和y轴的方向上/右为正，如示意图所示；
 
 
-## HighLevelMotionController 高层运动控制机器人状态介绍
+## 高层运动控制机器人状态介绍
 
 机器人的运动包含站立锁定、平衡站立、基础运动、特技动作状态，机器人在运行过程中，通过状态机在不同状态之间进行切换，以实现不同的控制任务。各个状态的解释说明如下：
 
@@ -153,7 +153,7 @@
 ![状态切换示意图](../image/robot_state_switch.png)
 
 
-## HighLevelMotionController 高层运动控制接口
+## 高层运动控制接口
 
 机器人的高层运动控制服务可分为基础运动控制和特技动作控制。
 - 基础运动控制服务中，可调用相应的接口，根据不同的地形场景和任务需求切换机器人的行走步态。

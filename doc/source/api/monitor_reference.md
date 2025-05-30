@@ -3,7 +3,7 @@
 
 > 提供机器人状态监控接口类，通过StateMonitor可以提供状态查询等接口。
 
-## StateMonitor 接口定义
+## 接口定义
 `StateMonitor` 是机器人系统状态监控管理类，该类通常用于控制机器人的状态管理，支持状态查询。
 
 ### GetCurrentState

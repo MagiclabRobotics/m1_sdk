@@ -3,7 +3,7 @@
 
 > 提供机器人系统语音服务控制器，通过AudioController可以通过RPC方式实现对机器人的音频进行指令控制和状态获取。
 
-##  AudioController 接口定义
+##  接口定义
 `AudioController` 是一个封装音频控制功能的 C++ 类，主要用于音频播放控制、TTS 播放、音量设置与查询等场景。
 
 ### AudioController
@@ -79,7 +79,7 @@
 | 备注 | 阻塞接口，返回值需检查后再使用 `volume`。 |
 
 
-##  AudioController 类型定义
+##  类型定义
 
 ### `TtsPriority` — TTS 播报优先级等级
 

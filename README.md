@@ -1,4 +1,4 @@
-# magic_m1_sdk
+# m1_sdk
 
 
 ## SDK Environment Requirements
@@ -29,6 +29,9 @@ You must install the following libraries/packages before building or using the S
 - `libfmt-dev`
 - `libprotobuf-dev`
 - `protobuf-compiler`
+- `libprotoc-dev`
+- `libgrpc++-dev`
+- `libgrpc-dev`
 - `libspdlog-dev`
 - `libcap-dev`
 - `libacl1-dev`
@@ -71,16 +74,6 @@ Enter doc/build/html directory, and open `index.html`
 ## Installation
 
 To build your own application with this SDK, you can install the magic_m1_sdk to specified directory:
-
-```
-  mkdir build
-  cd build
-  cmake ..
-  make -j8
-  sudo make install
-```
-
-Or install magic_m1_sdk to a specified directory:
 ```
   mkdir build
   cd build
@@ -92,6 +85,7 @@ You can refer to example/cmake_sample on how to import the `magic_m1_sdk` into y
 ```
   cd example/cmake_example
   mkdir build
+  cd build
   cmake .. -DCMAKE_PREFIX_PATH=/opt/magic_robotics/magic_m1_sdk
   make -j8
 ```
