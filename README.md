@@ -10,10 +10,18 @@ This SDK requires the following software and hardware environment to function pr
 
 - Ubuntu 22.04 or later (recommended)  
 
+#### System Configuration
+
+The following configurations need to be added to the `/etc/security/limits.conf` file for regular users:
+
+```
+*    -   rtprio   98
+```
+
 ### 2. Compiler & Toolchain
 
 - GCC version ≥ 11.4 (for Linux)
-- CMake ≥ 3.16
+- CMake ≥ 3.18
 - Make build system
 
 ### 3. Programming Language
@@ -26,29 +34,14 @@ You must install the following libraries/packages before building or using the S
 
 #### System Libraries
 
-- `libfmt-dev`
-- `libprotobuf-dev`
-- `protobuf-compiler`
-- `libprotoc-dev`
-- `libgrpc++-dev`
-- `libgrpc-dev`
 - `libspdlog-dev`
-- `libcap-dev`
-- `libacl1-dev`
 - `libyaml-cpp-dev`
 - `liblcm-dev`
-- `libdw-dev`
-- `libsystemd-dev`
-
-if orin, need another dependences:
-
-- `absl`
 
 Shell command:
 ```Bash
-sudo apt install -y libfmt-dev libprotobuf-dev protobuf-compiler libspdlog-dev libcap-dev libacl1-dev libyaml-cpp-dev liblcm-dev libdw-dev libsystemd-dev
+sudo apt install -y libspdlog-dev libyaml-cpp-dev liblcm-dev
 ```
-
 
 ## Build examples
 To build the examples inside this reposity:
